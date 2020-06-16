@@ -106,6 +106,8 @@ $(document).ready(calcButton);
 
 function calcButton() {
     $("#calculatorButton").on('click', bonusCalc(employees));
+    $( "#employeeList").val( '' );
+    
     let el = $("#employeeList");
     for (let i = 0; i < newArray.length; i++) {
         el.append("<li>Employee Name: " + newArray[i].name + ' <br> Bonus Percentage: ' + newArray[i].bonusPercentage + '<br> Total Compensation: \$ ' + newArray[i].totalCompensation + ' <br> Total Bonus: \$ ' + newArray[i].totalBonus + " </li>");
